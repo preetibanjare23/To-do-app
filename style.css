@@ -1,0 +1,296 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/020/271/167/non_2x/deep-blue-halftone-background-free-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.todo-container {
+    background-color: rgba(135, 207, 235, 0.407);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #c7c6c6;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#add-task:hover {
+    background-color: #1b752e;
+}
+
+#task-list, #completed-task-list, #incomplete-task-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+    overflow-y: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+#task-list li, #completed-task-list li, #incomplete-task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: large;
+    position: relative; /* Keep relative positioning for absolute children */
+    text-align: center; /* Center align text within the li */
+}
+
+#task-list li.completed, #completed-task-list li.completed, #incomplete-task-list li.completed {
+    text-decoration: line-through;
+    background-color: #d4edda;
+}
+
+#task-list li span, #completed-task-list li span, #incomplete-task-list li span {
+    flex-grow: 1; /* Allow text to take up available space */
+    margin: 0 50px; /* Add some space to account for icons */
+    text-align: center; /* Center align text within the span */
+}
+
+.remove-task {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.remove-task svg {
+    width: 18px;
+    height: 18px;
+    fill: #dc3545;
+}
+
+.remove-task:hover svg {
+    fill: #c82333;
+}
+
+#reset-tasks {
+    background-color: #f58905;
+    color: #fff;
+    border-radius: 15px;
+    width: 150px;
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+}
+
+#reset-tasks:hover {
+    background-color: #bb6903;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.tab-link {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-link.active {
+    background-color: #0056b3;
+}
+
+.tab-link:hover {
+    background-color: #0056b3;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.edit-task {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.edit-task svg {
+    width: 18px;
+    height: 18px;
+    fill: #121416;
+}
+
+.edit-task:hover svg {
+    fill: #0056b3;
+}
+
+#task-list li, #completed-task-list li, #incomplete-task-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-style: italic;
+    font-size: large;
+    position: relative; /* Keep relative positioning for absolute children */
+}
+
+#task-list li span, #completed-task-list li span, #incomplete-task-list li span {
+    flex-grow: 1; /* Allow text to take up available space */
+    margin: 0 50px; /* Add some space to account for icons */
+    text-align: center; /* Center align text within the span */
+}
+
+.edit-task,
+.remove-task {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute; /* Position icons absolutely */
+}
+
+.edit-task {
+    right: 40px; /* Position edit icon from the right edge */
+}
+
+.remove-task {
+    right: 10px; /* Position remove icon from the right edge */
+}
+
+.edit-task svg {
+    fill: #161c1f;
+}
+
+.edit-task:hover svg {
+    fill: #14375d;
+}
+
+.remove-task svg {
+    fill: #c01f2f;
+}
+
+.remove-task:hover svg {
+    fill: #860714;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and small devices */
+@media (max-width: 768px) {
+.todo-container {
+    width: 80%;
+    max-width: 100%;
+    padding: 10px;
+}
+
+#task-list, #completed-task-list, #incomplete-task-list {
+    max-height: 150px;
+}
+
+#reset-tasks {
+    width: 100%;
+    font-size: medium;
+}
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .todo-container {
+        width: 90%;
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 16px);
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: small;
+    }
+
+    #task-list, #completed-task-list, #incomplete-task-list {
+        max-height: 120px;
+    }
+
+    #reset-tasks {
+        width: 100%;
+        font-size: small;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-link {
+        margin-bottom: 5px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+#button-container {
+    color: rgb(60, 2, 91);
+    position: absolute; /* Positioning it absolutely */
+    bottom: 20px; /* Distance from the bottom */
+    background-color: #9ec3f27a;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid rgb(68, 66, 66);
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 1.8rem;
+}
+
+#button-container:hover {
+    background-color: #0056b3;
+}

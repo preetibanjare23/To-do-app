@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <input type="text" id="new-task" placeholder="Add a new task...">
+        <button id="add-task">Add Task</button>
+        <input type="text" id="search-task" placeholder="Search tasks...">
+        <div class="tabs">
+            <button class="tab-link active" data-tab="all-tasks">All Tasks</button>
+            <button class="tab-link" data-tab="completed-tasks">Completed Tasks</button>
+            <button class="tab-link" data-tab="incomplete-tasks">Incomplete Tasks</button>
+        </div>
+        <div id="all-tasks" class="tab-content active">
+            <ul id="task-list"></ul>
+        </div>
+        <div id="completed-tasks" class="tab-content">
+            <ul id="completed-task-list"></ul>
+        </div>
+        <div id="incomplete-tasks" class="tab-content">
+            <ul id="incomplete-task-list"></ul>
+        </div>
+        <button id="reset-tasks">Reset Tasks</button>
+    </div>
+    <div id="button-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>
+        <a href="index.html" class="button">Go back</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

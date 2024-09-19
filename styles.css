@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    background-image: url("g.jpg");
+    background-position: center;
+    height: 100vh;
+}
+
+img {
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-size: 3rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.second-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+a {
+    border: 2px solid white;
+    color: white;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    border-radius: 1.5rem; 
+}
+
+.button {
+    padding: 0.2rem 2rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    border-radius: 1.8rem;
+}
+
+a:hover {
+    color: grey;
+    background-color: white;
+}
+
+#para {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+#heading {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* Media Queries */
+
+/* Large devices (desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    p {
+        font-size: 2.5rem;
+    }
+
+    a {
+        font-size: 1.6rem;
+    }
+
+    img {
+        max-width: 950px;
+    }
+}
+
+@media (max-width: 1200px) {
+    p {
+        font-size: 2.5rem;
+    }
+
+    a {
+        font-size: 1.6rem;
+    }
+
+    img {
+        max-width: 950px;
+    }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (max-width: 992px) {
+    p {
+        font-size: 2rem;
+    }
+
+    a {
+        font-size: 1.4rem;
+    }
+
+    img {
+        max-width: 900px;
+    }
+}
+
+/* Small devices (landscape phones, 768px and up) */
+@media (max-width: 768px) {
+    p {
+        font-size: 1.8rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+    }
+
+    img {
+        max-width: 700px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    p {
+        font-size: 1.5rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    img {
+        max-width: 450px;
+    }
+}
+
+/* Very small devices (less than 400px) */
+@media (max-width: 400px) {
+    p {
+        font-size: 1.2rem;
+    }
+
+    a {
+        font-size: 0.8rem;
+    }
+
+    img {
+        max-width: 350px;
+    }
+}
